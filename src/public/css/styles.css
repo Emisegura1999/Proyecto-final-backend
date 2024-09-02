@@ -26,6 +26,10 @@ html {
 
 body {
   font-family: "Arial", sans-serif;
+  background-image: url("../img/fondo.avif");
+  background-size: cover;
+  background-repeat: no-repeat;
+
 }
 
 /*Utils*/
@@ -83,7 +87,7 @@ a {
 
 .header-title {
   text-align: center;
-  color: var(--primary-color);
+  color: white;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 1.6rem;
@@ -103,11 +107,11 @@ a {
 
 /*NavBar*/
 nav {
-  background-color: var(--secondary-color);
+  background-color: lightblue;
 }
 
 .nav-text {
-  color: var(--text-primary);
+  color: white;
   font-weight: 600;
 }
 
