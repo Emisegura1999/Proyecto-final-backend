@@ -6,6 +6,15 @@ const configObject = require("./env.config.js");
 const JWTStrategy = jwt.Strategy;
 const Jwt = jwt.ExtractJwt;
 
+
+const cookieExtractor = (req) => {
+    let token = null;
+    if(req && req.cookies) {
+        token = req.cookies[configObject.auth.cookie_token];
+    }
+    return token;
+}
+
 const initializePassport = () => {
     passport.use("jwt", new JWTStrategy({
         jwtFromRequest: Jwt.fromExtractors([cookieExtractor]),
@@ -23,12 +32,5 @@ const initializePassport = () => {
     }));
 }
 
-const cookieExtractor = (req) => {
-    let token = null;
-    if(req && req.cookies) {
-        token = req.cookies[configObject.auth.cookie_token];
-    }
-    return token;
-}
 
 module.exports = initializePassport;
