@@ -2,7 +2,7 @@ const Product = require("../models/products.model.js");
 const CartRepository = require("../repositories/cart.repository.js");
 const ProductRepository = require("../repositories/product.repository.js");
 const { logger } = require("../middleware/loggerMiddleware.js");
-const DTO = require("../Dto/UserDto.js");
+const DTO = require("../dto/Userdto.js");
 
 const cartR = new CartRepository();
 const prodR = new ProductRepository();
